@@ -39,6 +39,8 @@ header {
     margin-left: 20px;
 }
 
+
+
 /* main */
 
 /* first section */
@@ -139,6 +141,8 @@ header {
 
 .article-content {
     padding: 20px 20px 20px 0px;
+    color: #B3B2B7;
+    font-size: 16.298px;
 }
 
 /* best of the month */
@@ -158,16 +162,16 @@ header {
 }
 
 .player-card img {
-    width: 50px;
+    width: 60px;
     position: relative;
-    bottom: 25px;
+    bottom: 30px;
 }
 
 .player-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 18px;
+    margin: 40px 18px;
     background-color: #FAFAFA;
 
 }
@@ -178,11 +182,13 @@ header {
     font-weight: 700;
     line-height: 156.6%;
     letter-spacing: -0.161px;
-    margin: 20px 0px;
+    margin: 5px 0px;
 }
 
 .player-card-text {
     padding: 10px;
+    color: #B3B2B7;
+    font-size: 16.298px;
 }
 
 
@@ -223,19 +229,20 @@ footer {
     gap: 25px;
 }
 
-.nav-footer-items{
+.nav-footer-items {
     display: flex;
     flex-wrap: wrap;
     padding: 0px 50px;
     column-gap: 150px;
     row-gap: 10px;
 }
+
 .nav-footer-item {
     color: white;
     font-size: 16px;
 }
 
-form{
+form {
     display: flex;
     gap: 10px;
     padding: 10px 50px;
@@ -249,7 +256,7 @@ form{
     width: 80%;
 }
 
-.round-btn-footer{
+.round-btn-footer {
     border-radius: 50px;
     background: var(--violet);
     color: white;
@@ -257,23 +264,220 @@ form{
     text-align: center;
 }
 
-.icons-social-media{
+.icons-social-media {
     display: flex;
     padding: 5px 40px;
     justify-content: space-between;
 }
 
-.Machete{
+.Machete {
     color: var(--blueGray)
 }
 
-.logo-footer{
+.logo-footer {
     height: 25px;
 }
 
-.Copyright{
+.Copyright {
     color: #8C8C94;
     font-size: 12.5px;
     font-weight: 500;
     margin: 0px auto 40px;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 767px) {
+
+    /* CSS rules for small screens */
+    .nav-items,
+    .logo-desktop,
+    .round-btn-header,
+    .footer-desktop,
+    .player-card-desktop {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    /* CSS rules for other screens */
+
+    .logo-hamburger, footer, .player-card {
+        display: none;
+
+    }
+
+    .navbar {
+        display: flex;
+        padding: 65px 165px;
+        justify-content: space-between;
+    }
+
+    .nav-items,
+    .logo-desktop,
+    .round-btn-header {
+        display: initial;
+    }
+
+    .nav-items {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+    }
+
+    .round-btn-header {
+        border-radius: 50px;
+        background: var(--violet);
+        color: white;
+        padding: 10px 30px;
+        text-align: center;
+        box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .paddel-img {
+        max-width: 600px;
+        /* Set a fixed width for the image */
+        height: auto;
+        /* Allow the height to adjust proportionally */
+        object-fit: contain;
+        /* Maintain the aspect ratio without cropping */
+    }
+
+    .paddel-intro {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 0px 10%;
+        gap: 5%;
+    }
+
+    .text-section {
+        background-color: var(--violet);
+        display: flex;
+        padding: 40px 220px;
+        justify-content: space-between;
+        gap: 100px;
+
+    }
+
+    .paragraph-text-section {
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 151.1%;
+    }
+
+    .player-card-desktop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #B3B2B7;
+        font-weight: 500;
+        margin: 18px;
+        background-color: #FAFAFA;
+        width:30%;
+        margin: 40px 2px;
+    }
+
+    .player-card-desktop img {
+        width: 60px;
+        position: relative;
+        bottom: 30px;
+    }
+
+
+    .footer-desktop{
+        background-color: var(--blueGray);
+        gap: 25px;
+        padding-bottom: 20px;
+    }
+
+    .container-footer{
+        display: flex;
+        padding: 40px 220px;
+        justify-content: space-between;
+    }
+    .footer-left{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100px;
+
+    }
+
+    .icons-social-media{
+        gap: 10px;
+        padding: 0;
+    }
+
+    .nav-footer-items{
+        width: 50%
+    }
+
+    form{
+        padding: 0;
+    }
+    .search-input{
+        min-width: 100px;
+    }
+
+    .Copyright{
+        margin: 0;
+        padding: 0px 220px;
+        text-align: end;
+    }
+
+    .container-players{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .text-section-last{
+        flex-direction: row;
+        background-color: var(--violet);
+        justify-content: space-between;
+        padding: 30px 250px;
+
+    }
+
+    .section-title{
+        width: 30%;
+        margin: 0;
+    }
+
+    .round-btn-go {
+        border-radius: 50px;
+        background: var(--GoBtn);
+        color: white;
+        padding: 10px 30px;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .articles-section{
+        background-color:#FAFAFA;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .article-card{
+        width: 40%;
+    }
+
+    .article-title{
+        background: rgba(139, 72, 191, 0)
+    }
+
+    .article-content{
+        padding-left: 80px;
+        color: #B3B2B7;
+        font-size: 16.298px;
+    }
+
 }
